@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+
+
+.page-ref::before {
+  content: '';
+  display: block;
+  height: 2px;
+  background-color: #EEEFF4;
+  width: 250px;
+  margin-right: 20px;
+}
+
+.bg-footer {
+  background: linear-gradient(90deg, rgba(238,239,244,1) 0%, rgba(238,239,244,1) 90%, rgba(255,255,255,1) 90%);;
+}
+
+
+@tailwind utilities;

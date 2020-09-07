@@ -3,60 +3,188 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
   
   <title>Frontend Mentor | Arch Studio Website Challenge</title>
 </head>
 <body>
 
-  Portfolio
+  <div class="container mx-auto relative font-main">
+    <p class="hidden md:flex origin-left transform rotate-90 translate-x-6 md:text-sm lg:text-lg lg:-translate-x-0 -translate-y-24 items-center absolute transform uppercase text-light-grey font-light tracking-widest page-ref">Portfolio</p>
+    <nav class="w-10/12 mx-auto flex items-center py-12">
+      <a name="top" class="mr-auto md:mr-16 md:mr-20"  href="index.html"><span class="hidden">Home</span><img src="assets/logo.svg" alt="company-logo"></a>
+      <ul class="hidden md:flex transform translate-y-2">
+        <li class="mr-12 lg:mr-20 font-light text-medium-grey"><a href="portfolio.html">Portfolio</a></li>
+        <li class="mr-12 lg:mr-20 font-light text-medium-grey"><a href="about">About Us</a></li>
+        <li class="font-light text-medium-grey"><a href="contact.html">Contact</a></li>
+      </ul>
+      <button><img class="md:hidden" src="assets/icons/icon-hamburger.svg" alt="menu-icon"></button>
+    </nav>
 
-  Portfolio
-  About Us
-  Contact
+    <main class="mb-16 md:mb-32">
+      <div class="w-10/12 mx-auto grid gap-6 grid-cols-1 lg:grid-cols-3">
+        <div class="relative">
+          <picture>
+            <source media="(min-width:960px)" srcset="assets/portfolio/desktop/image-seraph.jpg">
+            <source media="(min-width:760px)" srcset="assets/portfolio/tablet/image-seraph.jpg">
+            <img class="w-full object-cover"  src="assets/portfolio/mobile/image-seraph.jpg" alt="seraph station">
+          </picture>
+          <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-75"></div>
+          <div class="absolute text-white z-10 bottom-0 ml-8 mb-8">
+            <h3 class="mb-2 text-md md:text-lg"><a href="#">Seraph Station</a></h3>
+            <p class="font-thin text-sm">September 2019</p>
+          </div>
+        </div>
+        <div class="relative">
+          <picture>
+            <source media="(min-width:960px)" srcset="assets/portfolio/desktop/image-eebox.jpg">
+            <source media="(min-width:760px)" srcset="assets/portfolio/tablet/image-eebox.jpg">
+            <img class="w-full object-cover"  src="assets/portfolio/mobile/image-eebox.jpg" alt="eebox building">
+          </picture>
+          <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-75"></div>
+          <div class="absolute text-white z-10 bottom-0 ml-8 mb-8">
+            <h3 class="mb-2 text-md md:text-lg"><a href="#">Eebox Building</a></h3>
+            <p class="font-thin text-sm">August 2017</p>
+          </div>
+        </div>
+        <div class="relative">
+          <picture>
+            <source media="(min-width:960px)" srcset="assets/portfolio/desktop/image-federal.jpg">
+            <source media="(min-width:760px)" srcset="assets/portfolio/tablet/image-federal.jpg">
+            <img class="w-full object-cover"  src="assets/portfolio/mobile/image-federal.jpg" alt="federal tower">
+          </picture>
+          <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-75"></div>
+          <div class="absolute text-white z-10 bottom-0 ml-8 mb-8">
+            <h3 class="mb-2 text-md md:text-lg"><a href="#">Federal II Tower</a></h3>
+            <p class="font-thin text-sm">March 2017</p>
+          </div>
+        </div>
+        <div class="relative">
+          <picture>
+            <source media="(min-width:960px)" srcset="assets/portfolio/desktop/image-del-sol.jpg">
+            <source media="(min-width:760px)" srcset="assets/portfolio/tablet/image-del-sol.jpg">
+            <img class="w-full object-cover"  src="assets/portfolio/mobile/image-del-sol.jpg" alt="project del sol">
+          </picture>
+          <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-75"></div>
+          <div class="absolute text-white z-10 bottom-0 ml-8 mb-8">
+            <h3 class="mb-2 text-md md:text-lg"><a href="#">Project Del Sol</a></h3>
+            <p class="font-thin text-sm">January 2015</p>
+          </div>
+        </div>
+        <div class="relative">
+          <picture>
+            <source media="(min-width:960px)" srcset="assets/portfolio/desktop/image-prototype.jpg">
+            <source media="(min-width:760px)" srcset="assets/portfolio/tablet/image-prototype.jpg">
+            <img class="w-full object-cover"  src="assets/portfolio/mobile/image-prototype.jpg" alt="le prototype">
+          </picture>
+          <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-75"></div>
+          <div class="absolute text-white z-10 bottom-0 ml-8 mb-8">
+            <h3 class="mb-2 text-md md:text-lg"><a href="#">Le Prototype</a></h3>
+            <p class="font-thin text-sm">October 2015</p>
+          </div>
+        </div>
+        <div class="relative">
+          <picture>
+            <source media="(min-width:960px)" srcset="assets/portfolio/desktop/image-228b.jpg">
+            <source media="(min-width:760px)" srcset="assets/portfolio/tablet/image-228b.jpg">
+            <img class="w-full object-cover"  src="assets/portfolio/mobile/image-228b.jpg" alt="228b station">
+          </picture>
+          <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-75"></div>
+          <div class="absolute text-white z-10 bottom-0 ml-8 mb-8">
+            <h3 class="mb-2 text-md md:text-lg"><a href="#">228B Tower</a></h3>
+            <p class="font-thin text-sm">April 2015</p>
+          </div>
+        </div>
+        <div class="relative">
+          <picture>
+            <source media="(min-width:960px)" srcset="assets/portfolio/desktop/image-edelweiss.jpg">
+            <source media="(min-width:760px)" srcset="assets/portfolio/tablet/image-edelweiss.jpg">
+            <img class="w-full object-cover"  src="assets/portfolio/mobile/image-edelweiss.jpg" alt="grand edelweiss station">
+          </picture>
+          <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-75"></div>
+          <div class="absolute text-white z-10 bottom-0 ml-8 mb-8">
+            <h3 class="mb-2 text-md md:text-lg"><a href="#">Grand Edelweiss Hotel</a></h3>
+            <p class="font-thin text-sm">December 2013</p>
+          </div>
+        </div>
+        <div class="relative">
+          <picture>
+            <source media="(min-width:960px)" srcset="assets/portfolio/desktop/image-netcry.jpg">
+            <source media="(min-width:760px)" srcset="assets/portfolio/tablet/image-netcry.jpg">
+            <img class="w-full object-cover"  src="assets/portfolio/mobile/image-netcry.jpg" alt="netcry tower">
+          </picture>
+          <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-75"></div>
+          <div class="absolute text-white z-10 bottom-0 ml-8 mb-8">
+            <h3 class="mb-2 text-md md:text-lg"><a href="#">Netcry Tower</a></h3>
+            <p class="font-thin text-sm">August 2012</p>
+          </div>
+        </div>
+        <div class="relative">
+          <picture>
+            <source media="(min-width:960px)" srcset="assets/portfolio/desktop/image-hypers.jpg">
+            <source media="(min-width:760px)" srcset="assets/portfolio/tablet/image-hypers.jpg">
+            <img class="w-full object-cover"  src="assets/portfolio/mobile/image-hypers.jpg" alt="hypers">
+          </picture>
+          <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-75"></div>
+          <div class="absolute text-white z-10 bottom-0 ml-8 mb-8">
+            <h3 class="mb-2 text-md md:text-lg"><a href="#">Hypers</a></h3>
+            <p class="font-thin text-sm">January 2012</p>
+          </div>
+        </div>
+        <div class="relative">
+          <picture>
+            <source media="(min-width:960px)" srcset="assets/portfolio/desktop/image-sxiv.jpg">
+            <source media="(min-width:760px)" srcset="assets/portfolio/tablet/image-sxiv.jpg">
+            <img class="w-full object-cover"  src="assets/portfolio/mobile/image-sxiv.jpg" alt="sxiv">
+          </picture>
+          <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-75"></div>
+          <div class="absolute text-white z-10 bottom-0 ml-8 mb-8">
+            <h3 class="mb-2 text-md md:text-lg"><a href="#">SXIV Tower</a></h3>
+            <p class="font-thin text-sm">March 2011</p>
+          </div>
+        </div>
+        <div class="relative">
+          <picture>
+            <source media="(min-width:960px)" srcset="assets/portfolio/desktop/image-trinity.jpg">
+            <source media="(min-width:760px)" srcset="assets/portfolio/tablet/image-trinity.jpg">
+            <img class="w-full object-cover"  src="assets/portfolio/mobile/image-trinity.jpg" alt="Trinity Bank Tower">
+          </picture>
+          <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-75"></div>
+          <div class="absolute text-white z-10 bottom-0 ml-8 mb-8">
+            <h3 class="mb-2 text-md md:text-lg"><a href="#">Trinity Bank Tower</a></h3>
+            <p class="font-thin text-sm">September 2010</p>
+          </div>
+        </div>
+        <div class="relative">
+          <picture>
+            <source media="(min-width:960px)" srcset="assets/portfolio/desktop/image-paramour.jpg">
+            <source media="(min-width:760px)" srcset="assets/portfolio/tablet/image-paramour.jpg">
+            <img class="w-full object-cover"  src="assets/portfolio/mobile/image-paramour.jpg" alt="seraph station">
+          </picture>
+          <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-75"></div>
+          <div class="absolute text-white z-10 bottom-0 ml-8 mb-8">
+            <h3 class="mb-2 text-md md:text-lg"><a href="#">Project Paramour</a></h3>
+            <p class="font-thin text-sm">February 2008</p>
+          </div>
+        </div>
+      </div>
+    </main>
 
-  Seraph Station
-  September 2019
+    <footer>
+      <div class="flex flex-col md:flex-row items-center bg-very-light-grey md:bg-footer">
+        <a href="#top"><img class="bg-very-dark-blue p-12" src="assets/logo-white.svg" alt="company-logo"></a>
+        <ul class="flex flex-col md:flex-row w-full self-stretch items-center">
+          <li class="md:mx-8 lg:mx-16 my-8 md:my-0"><a class="text-medium-grey text-sm lg:text-lg" href="portfolio.html">Portfolio</a></li>
+          <li class="md:mr-8 lg:mr-16 mb-8 md:my-0"><a class="text-medium-grey text-sm lg:text-lg" href="about.html">About Us</a></li>
+          <li class="mb-16 md:mb-0"><a class="text-medium-grey text-sm lg:text-lg" href="contact.html">Contact</a></li>
+          <li class="md:ml-auto mb-24 md:mb-0"><a class="bg-very-dark-blue text-white text-sm font-light px-8 py-8 md:py-4 lg:py-8 lg:text-lg" href="portfolio.html">See Our Portfolio <img class="ml-6 inline" src="assets/icons/icon-arrow.svg" alt="arrow icon"></a></li>
+        </ul>
+      </div>
+    </footer>
 
-  Eebox Building
-  August 2017
-
-  Federal II Tower
-  March 2017
-
-  Project Del Sol
-  January 2016
-
-  Le Prototype
-  October 2015
-
-  228B Tower
-  April 2015
-
-  Grand Edelweiss Hotel
-  December 2013
-
-  Netcry Tower
-  August 2012
-
-  Hypers
-  January 2012
-
-  SXIV Tower
-  March 2011
-
-  Trinity Bank Tower
-  September 2010
-
-  Project Paramour
-  February 2008
-
-  Portfolio
-  About Us
-  Contact
-
-  See Our Portfolio
+  </div>
 
 </body>
 </html>

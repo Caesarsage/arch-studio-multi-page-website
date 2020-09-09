@@ -14,6 +14,7 @@
   crossorigin=""></script>
   <script src="js/mobile-menu.js" defer></script>
   <script src="js/map.js" defer></script>
+  <script src="js/form.js" defer></script>
   <title>Frontend Mentor | Arch Studio Website Challenge</title>
 </head>
 <body>
@@ -107,7 +108,7 @@
           </div>
         </div>
 
-        <div id="mapid" class="h-64"></div>
+        <div id="mapid" class="h-64" style="height: 600px;"></div>
       </iframe>
   
       </section>
@@ -117,14 +118,17 @@
           Connect with us
         </h2>
         
-        <form class="w-full lg:w-2/3">
+        <form id="form" class="w-full lg:w-2/3">
+          <p id="nameErrorMsg" class="hidden inline-block bg-red-500 text-very-light-grey px-4 py-2 mb-4">Name field cannot be empty</p>
           <label class="hidden" for="name">name</label>
-          <input class="border-b border-dark-grey p-2 appearance-none bg-transparent w-full text-gray-700 mr-3 mb-8" type="text" placeholder="Name" aria-label="name">
+          <input id="nameInput" class="border-b border-dark-grey p-2 appearance-none bg-transparent w-full text-gray-700 mr-3 mb-8 focus:outline-none" type="text" placeholder="Name" aria-label="name">
+          <p id="emailErrorMsg" class="hidden inline-block bg-red-500 text-very-light-grey px-4 py-2 mb-4">Email field cannot be empty</p>
           <label class="hidden" for="email">email</label>
-          <input class="border-b border-dark-grey p-2 appearance-none bg-transparent w-full text-gray-700 mr-3 mb-8" type="email" placeholder="Email" aria-label="email">
+          <input id="emailInput" class="border-b border-dark-grey p-2 appearance-none bg-transparent w-full text-gray-700 mr-3 mb-8 focus:outline-none" type="email" placeholder="Email" aria-label="email">
+          <p id="msgErrorMsg" class="hidden inline-block bg-red-500 text-very-light-grey px-4 py-2 mb-4">Message field cannot be empty</p>
           <label class="hidden" for="message">message</label>
-          <textarea class="border-b border-dark-grey p-2 appearance-none bg-transparent w-full text-gray-700 mr-3 leading-tight focus:outline-none" type="textarea" placeholder="Message" aria-label="message"></textarea>
-          <button class="bg-very-dark-blue p-6 flex items-center justify-center -mt-2 ml-auto" type="button"><span class="hidden">Sign Up</span><img class="w-4 h-4" src="assets/icons/icon-arrow.svg" alt="arrow icon"></button>
+          <textarea id="textarea" class="border-b border-dark-grey p-2 appearance-none bg-transparent w-full text-gray-700 mr-3 leading-tight focus:outline-none" type="textarea" placeholder="Message" aria-label="message"></textarea>
+          <button id="formBtn" type="submit" class="bg-very-dark-blue p-6 flex items-center justify-center -mt-2 ml-auto" type="button"><span class="hidden">Sign Up</span><img class="w-4 h-4" src="assets/icons/icon-arrow.svg" alt="arrow icon"></button>
         </form>
       </section>
 

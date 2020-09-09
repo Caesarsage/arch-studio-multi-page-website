@@ -12,8 +12,13 @@
 }
 
 .bg-footer {
-  background: linear-gradient(90deg, rgba(238,239,244,1) 0%, rgba(238,239,244,1) 90%, rgba(255,255,255,1) 90%);;
+  background: linear-gradient(0deg, rgba(238,239,244,1) 85%, rgba(255,255,255,1) 85%);
 }
 
+@media (min-width: 768px) {
+  .bg-footer {
+    background: linear-gradient(90deg, rgba(238,239,244,1) 0%, rgba(238,239,244,1) 90%, rgba(255,255,255,1) 90%);
+  }
+}
 
 @tailwind utilities;

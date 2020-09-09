@@ -3,55 +3,144 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@300;500;700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+  integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+  crossorigin=""/>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+  integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+  crossorigin=""></script>
+  <script src="js/mobile-menu.js" defer></script>
+  <script src="js/map.js" defer></script>
   <title>Frontend Mentor | Arch Studio Website Challenge</title>
 </head>
 <body>
+  <div class="container mx-auto relative font-main overflow-hidden">
+    <p class="hidden md:flex origin-left transform rotate-90 translate-x-6 md:text-sm lg:text-lg lg:-translate-x-0 -translate-y-24 items-center absolute uppercase text-light-grey font-light tracking-widest page-ref">Contact Us</p>
+    <nav class="relative px-12 md:px-0 md:w-10/12 mx-auto flex items-center py-12">
+      <a name="top" class="mr-auto md:mr-20"  href="index.html"><span class="hidden">Home</span><img src="assets/logo.svg" alt="company-logo"></a>
+      <ul class="hidden md:flex transform translate-y-2">
+        <li class="mr-12 lg:mr-20 font-light text-medium-grey"><a href="portfolio.html">Portfolio</a></li>
+        <li class="mr-12 lg:mr-20 font-light text-medium-grey"><a href="about.html">About Us</a></li>
+        <li class="font-light text-medium-grey"><a href="contact.html">Contact</a></li>
+      </ul>
+      <button id="menu" class="md:hidden focus:outline-none relative"><img src="assets/icons/icon-hamburger.svg" alt="menu-icon"><img class="hidden" src="assets/icons/icon-close.svg" alt="close-icon"></button>
+    </nav>
+    <div id="mobile-menu" class="md:hidden absolute w-11/12 top-136px right-0 bg-very-light-grey z-30 py-12 px-12 transform translate-x-full transition-transform duration-500">
+      <ul>
+        <li class="mb-12"><a href="portfolio.html">Porfolio</a></li>
+        <li class="mb-12"><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+    <main>
+      <section class="w-10/12 mx-auto relative flex flex-col mb-20">
+        <div class="relative lg:w-3/5 mb-16"> 
+          <picture>
+            <source media="(min-width:960px)" srcset="assets/contact/desktop/image-hero.jpg">
+            <source media="(min-width:760px)" srcset="assets/contact/tablet/image-hero.jpg">
+            <img class="w-full object-cover"  src="assets/contact/mobile/image-hero.jpg" alt="contact hero image">
+          </picture>
+          <div class="absolute bg-white w-10/12 h-12 z-10 bottom-0 md:right-0 md:h-2/3 lg:w-1/3 lg:transform lg:translate-x-px lg:translate-y-px"></div>
+        </div>
+        
+        <div class="md:absolute md:z-20 right-0 bottom-0 md:w-4/5 lg:w-2/5 md:transform md:-translate-y-16 md:px-8">
+          <span class="hidden md:inline-block mt-12 md:mt-0 md:text-12xl text-very-light-grey transform md:-translate-y-20 md:-ml-8 lg:-ml-56">Contact</span>
+          <span class="hidden md:inline-block bg-light-grey w-1/3 h-px md:mb-12"></span>
+          <h1 class="font-bold text-4xl md:text-5xl text-very-dark-blue leading-tight mb-12 lg:text-5xl">
+            Tell us about your project
+          </h1>
+      
+          <p class="text-medium-grey leading-loose mb-12 md:mb-0">
+            We’d love to hear more about your project. Please, leave a message below or give us a call. We have two offices, one in Texas and one in Tennessee. If you find yourself nearby, come say hello!
+          </p>
+          <span class="bg-light-grey inline-block w-1/3 h-px md:hidden"></span>
+        </div>
+      </section>
 
-  Contact
+      
 
-  Portfolio
-  About Us
-  Contact
+      <section class="w-10/12 mx-auto mb-24">
+        <div class="lg:flex justify-between lg:mb-12">
+          <h2 class="font-bold text-4xl md:text-5xl text-very-dark-blue leading-tight mb-12 lg:text-5xl lg:w-1/5">
+            Contact Details
+          </h2>
+    
+          <div class="mb-8 lg:w-1/3">
+            <h3 class="text-dark-grey font-bold mb-6">
+              Main Office
+            </h3>
+            <ul class="text-medium-grey">
+              <li class="flex justify-between mb-3">
+                <span>Mail:</span><span>archone@mail.com</span>
+              </li>
+              <li class="flex justify-between mb-3">
+                <span>Address:</span><span>1892 Chenoweth Drive TN</span>
+              </li>
+              <li class="flex justify-between">
+                <span>Phone:</span><span>123-456-3451</span>
+              </li>
+            </ul>
+      
+            <a class="flex items-center font-bold text-very-dark-blue mt-8" href="#">View on Map <img class="ml-4" src="assets/icons/icon-arrow-black.svg" alt="arrow icon"></a>
+          </div>
+  
+          <div class="mb-8 lg:w-1/3">
+            <h3 class="text-dark-grey font-bold mb-6">
+              Office II
+            </h3>
+            <ul class="text-medium-grey">
+              <li class="flex justify-between mb-3">
+                <span>Mail:</span><span>archtwo@mail.com</span>
+              </li>
+              <li class="flex justify-between mb-3">
+                <span>Address:</span><span>3399 Wines Lane TX</span>
+              </li>
+              <li class="flex justify-between">
+                <span>Phone:</span><span>832-123-4321</span>
+              </li>
+            </ul>
+      
+            <a class="flex items-center font-bold text-very-dark-blue mt-8" href="#">View on Map <img class="ml-4" src="assets/icons/icon-arrow-black.svg" alt="arrow icon"></a>
+          </div>
+        </div>
 
-  Contact
+        <div id="mapid" class="h-64"></div>
+      </iframe>
+  
+      </section>
 
-  Tell us about your project
+      <section class="w-10/12 mx-auto mb-24 lg:flex justify-between">
+        <h2 class="font-bold text-4xl md:text-5xl text-very-dark-blue leading-tight mb-12 lg:text-5xl lg:w-1/5">
+          Connect with us
+        </h2>
+        
+        <form class="w-full lg:w-2/3">
+          <label class="hidden" for="name">name</label>
+          <input class="border-b border-dark-grey p-2 appearance-none bg-transparent w-full text-gray-700 mr-3 mb-8" type="text" placeholder="Name" aria-label="name">
+          <label class="hidden" for="email">email</label>
+          <input class="border-b border-dark-grey p-2 appearance-none bg-transparent w-full text-gray-700 mr-3 mb-8" type="email" placeholder="Email" aria-label="email">
+          <label class="hidden" for="message">message</label>
+          <textarea class="border-b border-dark-grey p-2 appearance-none bg-transparent w-full text-gray-700 mr-3 leading-tight focus:outline-none" type="textarea" placeholder="Message" aria-label="message"></textarea>
+          <button class="bg-very-dark-blue p-6 flex items-center justify-center -mt-2 ml-auto" type="button"><span class="hidden">Sign Up</span><img class="w-4 h-4" src="assets/icons/icon-arrow.svg" alt="arrow icon"></button>
+        </form>
+      </section>
 
-  We’d love to hear more about your project. Please, leave a message below or give 
-  us a call. We have two offices, one in Texas and one in Tennessee. If you find 
-  yourself nearby, come say hello!
-
-  Contact Details
-
-  Main Office
-  Mail:	archone@mail.com
-  Address: 1892 Chenoweth Drive TN
-  Phone: 123-456-3451
-
-  View on Map
-
-  Office II
-  Mail: archtwo@mail.com
-  Address: 3399 Wines Lane TX
-  Phone: 832-123-4321
-
-  View on Map
-
-  Connect with us
-
-  Name
-  Email
-  Message
-
-
-  Portfolio
-  About Us
-  Contact
-
-  See Our Portfolio
+    </main>
+  </div>
+  <footer>
+    <div class="flex flex-col md:flex-row items-center bg-footer">
+      <a href="#top"><img class="bg-very-dark-blue p-12" src="assets/logo-white.svg" alt="company-logo"></a>
+      <ul class="flex flex-col md:flex-row w-full self-stretch items-center">
+        <li class="md:mx-8 lg:mx-16 my-8 md:my-0"><a class="text-medium-grey text-sm" href="portfolio.html">Portfolio</a></li>
+        <li class="md:mr-8 lg:mr-16 mb-8 md:my-0"><a class="text-medium-grey text-sm" href="about.html">About Us</a></li>
+        <li class="mb-16 md:mb-0"><a class="text-medium-grey text-sm" href="contact.html">Contact</a></li>
+        <li class="md:ml-auto mb-24 md:mb-0"><a class="bg-very-dark-blue text-white text-sm font-light px-8 py-8 md:py-4 lg:py-8" href="portfolio.html">See Our Portfolio <img class="ml-6 inline" src="assets/icons/icon-arrow.svg" alt="arrow icon"></a></li>
+      </ul>
+    </div>
+  </footer>
 
 </body>
 </html>

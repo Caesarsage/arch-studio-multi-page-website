@@ -3,58 +3,160 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@300;500;700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/mobile-menu.js" defer></script>
   <title>Frontend Mentor | Arch Studio Website Challenge</title>
 </head>
 <body>
 
-  About Us
+  <div class="container mx-auto relative font-main overflow-hidden">
+    <p class="hidden md:flex origin-left transform rotate-90 translate-x-6 md:text-sm lg:text-lg lg:-translate-x-0 -translate-y-24 items-center absolute uppercase text-light-grey font-light tracking-widest page-ref">About Us</p>
+    <nav class="relative px-12 md:px-0 md:w-10/12 mx-auto flex items-center py-12">
+      <a name="top" class="mr-auto md:mr-20"  href="index.html"><span class="hidden">Home</span><img src="assets/logo.svg" alt="company-logo"></a>
+      <ul class="hidden md:flex transform translate-y-2">
+        <li class="mr-12 lg:mr-20 font-light text-medium-grey"><a href="portfolio.html">Portfolio</a></li>
+        <li class="mr-12 lg:mr-20 font-light text-medium-grey"><a href="about.html">About Us</a></li>
+        <li class="font-light text-medium-grey"><a href="contact.html">Contact</a></li>
+      </ul>
+      <button id="menu" class="md:hidden focus:outline-none relative"><img src="assets/icons/icon-hamburger.svg" alt="menu-icon"><img class="hidden" src="assets/icons/icon-close.svg" alt="close-icon"></button>
+    </nav>
+    <div id="mobile-menu" class="md:hidden absolute w-11/12 top-136px right-0 bg-very-light-grey z-30 py-12 px-12 transform translate-x-full transition-transform duration-500">
+      <ul>
+        <li class="mb-12"><a href="portfolio.html">Porfolio</a></li>
+        <li class="mb-12"><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+    <main class="mb-32">
+      <div class="w-10/12 mx-auto relative flex flex-col mb-20">
 
-  Portfolio
-  About Us
-  Contact
+        <div class="relative lg:w-3/5 mb-16"> 
+          <picture>
+            <source media="(min-width:960px)" srcset="assets/about/desktop/image-hero.jpg">
+            <source media="(min-width:760px)" srcset="assets/about/tablet/image-hero.jpg">
+            <img class="w-full object-cover"  src="assets/about/mobile/image-hero.jpg" alt="about us hero image">
+          </picture>
+          <div class="absolute bg-white w-10/12 h-12 z-10 bottom-0 md:right-0 md:h-2/3 lg:w-1/3 lg:transform lg:translate-x-px lg:translate-y-px"></div>
+        </div>
+        
+        <div class="md:absolute md:z-20 right-0 bottom-0 md:w-4/5 lg:w-2/5 md:transform md:-translate-y-16 md:px-8">
+          <span class="hidden md:inline-block mt-12 md:mt-0 md:text-12xl text-very-light-grey z-0 transform md:-translate-y-16">About</span>
+          <span class="hidden md:inline-block bg-light-grey w-1/3 h-px md:mb-12"></span>
+          <h1 class="mb-12 text-5xl  font-bold text-very-dark-blue">
+            Your team of professionals
+          </h1>
+      
+          <p class="text-medium-grey leading-loose mb-12 md:mb-0">
+            Our small team of world-class professionals will work with you every step of the way. 
+            Strong relationships are at the core of everything we do. This extends to the 
+            relationship our projects have with their surroundings.
+          </p>
+          <span class="bg-light-grey inline-block w-1/3 h-px md:hidden"></span>
+        </div>
+      </div>
+  
+      <div class="w-10/12 mx-auto mb-32 lg:flex items-end">
+        <div class="lg:mr-16">
+          <span class="hidden bg-light-grey lg:inline-block w-1/3 h-px mb-16"></span>
+          <h2 class="text-4xl md:text-5xl mb-12 font-bold text-very-dark-blue">
+            Our Heritage
+          </h2>
+      
+          <p class="text-medium-grey leading-loose mb-8">
+            Founded in 2007, we started as a trio of architects. Our complimentary skills and 
+            relentless attention to detail turned Arch into one of the most sought after boutique 
+            firms in the country.
+          </p>
+      
+          <p class="text-medium-grey leading-loose mb-8">
+            Speciliazing in Urban Design allowed us to focus on creating exceptional structures that 
+            live in harmony with their surroundings. We consider every detail from every surrounding 
+            element to inform our designs. 
+          </p>
+      
+          <p class="text-medium-grey leading-loose">
+            Our small team of world-class professionals provides input on every project.
+          </p>
+        </div>
 
-  About
+        <img class="hidden lg:block" src="assets/about/desktop/image-heritage.jpg" alt="our heritage image">
+      </div>
+  
+      <div class="mx-auto w-10/12 lg:flex justify-between">
+        <h2 class="text-4xl md:text-5xl md:mr-8 mb-12 font-bold text-very-dark-blue">
+          The Leaders
+        </h2>
+    
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="flex flex-col">
+            <img class="mb-4 object-cover" src="assets/about/desktop/avatar-jake.jpg" alt="jake richards">
+            <p class="text-very-dark-blue mb-2">
+              Jake Richards
+            </p>
+            <p class="text-medium-grey text-sm">
+            	Chief Architect
+            </p>
+            <div class="flex mt-3">
+              <img class="w-6 h-6 mr-4" src="assets/icons/icon-linkedin.svg" alt="linkedin icon">
+              <img class="w-6 h-6" src="assets/icons/icon-twitter.svg" alt="twitter icon">
+            </div>
+          </div>
+          <div class="flex flex-col">
+            <img class="mb-4 object-cover" src="assets/about/desktop/avatar-thompson.jpg" alt="thompson smith">
+            <p class="text-very-dark-blue mb-2">
+              Thompson Smith
+            </p>
+            <p class="text-medium-grey text-sm">
+            	Head of Finance
+            </p>
+            <div class="flex mt-3">
+              <img class="w-6 h-6 mr-4" src="assets/icons/icon-linkedin.svg" alt="linkedin icon">
+              <img class="w-6 h-6" src="assets/icons/icon-twitter.svg" alt="twitter icon">
+            </div>
+          </div>
+          <div class="flex flex-col">
+            <img class="mb-4 object-cover" src="assets/about/desktop/avatar-jackson.jpg" alt="jackson rourke">
+            <p class="text-very-dark-blue mb-2">
+              Jackson Rourke
+            </p>
+            <p class="text-medium-grey text-sm">
+            	Lead Designer
+            </p>
+            <div class="flex mt-3">
+              <img class="w-6 h-6 mr-4" src="assets/icons/icon-linkedin.svg" alt="linkedin icon">
+              <img class="w-6 h-6" src="assets/icons/icon-twitter.svg" alt="twitter icon">
+            </div>
+          </div>
+          <div class="flex flex-col">
+            <img class="mb-4 object-cover" src="assets/about/desktop/avatar-maria.jpg" alt="maria simpson">
+            <p class="text-very-dark-blue mb-2">
+              Maria Simpson
+            </p>
+            <p class="text-medium-grey text-sm">
+            	Senior Architect
+            </p>
+            <div class="flex mt-3">
+              <img class="w-6 h-6 mr-4" src="assets/icons/icon-linkedin.svg" alt="linkedin icon">
+              <img class="w-6 h-6" src="assets/icons/icon-twitter.svg" alt="twitter icon">
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
 
-  Your team of professionals
-
-  Our small team of world-class professionals will work with you every step of the way. 
-  Strong relationships are at the core of everything we do. This extends to the 
-  relationship our projects have with their surroundings.
-
-  Our Heritage
-
-  Founded in 2007, we started as a trio of architects. Our complimentary skills and 
-  relentless attention to detail turned Arch into one of the most sought after boutique 
-  firms in the country.
-
-  Speciliazing in Urban Design allowed us to focus on creating exceptional structures that 
-  live in harmony with their surroundings. We consider every detail from every surrounding 
-  element to inform our designs. 
-
-  Our small team of world-class professionals provides input on every project.
-
-  The Leaders
-
-  Jake Richards
-  Chief Architect
-
-  Thompson Smith
-  Head of Finance
-
-  Jackson Rourke
-  Lead Designer
-
-  Maria Simpson
-  Senior Architect
-
-  Portfolio
-  About Us
-  Contact
-
-  See Our Portfolio
-
+    <footer>
+      <div class="flex flex-col md:flex-row items-center bg-footer">
+        <a href="#top"><img class="bg-very-dark-blue p-12" src="assets/logo-white.svg" alt="company-logo"></a>
+        <ul class="flex flex-col md:flex-row w-full self-stretch items-center">
+          <li class="md:mx-8 lg:mx-16 my-8 md:my-0"><a class="text-medium-grey text-sm" href="portfolio.html">Portfolio</a></li>
+          <li class="md:mr-8 lg:mr-16 mb-8 md:my-0"><a class="text-medium-grey text-sm" href="about.html">About Us</a></li>
+          <li class="mb-16 md:mb-0"><a class="text-medium-grey text-sm" href="contact.html">Contact</a></li>
+          <li class="md:ml-auto mb-24 md:mb-0"><a class="bg-very-dark-blue text-white text-sm font-light px-8 py-8 md:py-4 lg:py-8" href="portfolio.html">See Our Portfolio <img class="ml-6 inline" src="assets/icons/icon-arrow.svg" alt="arrow icon"></a></li>
+        </ul>
+      </div>
+    </footer>
+  </div>
 </body>
 </html>

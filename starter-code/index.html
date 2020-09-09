@@ -6,74 +6,109 @@
   <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@300;500;700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
   <link rel="stylesheet" href="css/style.css">
+  <script src="js/mobile-menu.js" defer></script>
+  <script src="js/carrousel.js" defer></script>
   <title>Frontend Mentor | Arch Studio Website Challenge</title>
 </head>
 <body>
-  <div class="container mx-auto relative font-main">
-    <p class="hidden md:flex origin-left transform rotate-90 translate-x-6 md:text-sm lg:text-lg lg:-translate-x-0 -translate-y-24 items-center absolute transform uppercase text-light-grey font-light tracking-widest page-ref">Home</p>
-    <nav class="w-10/12 mx-auto flex items-center py-12">
-      <a name="top" class="mr-auto md:mr-16 md:mr-20"  href="index.html"><span class="hidden">Home</span><img src="assets/logo.svg" alt="company-logo"></a>
+  <div class="container mx-auto relative font-main overflow-hidden">
+    <p class="hidden md:flex origin-left transform rotate-90 translate-x-6 md:text-sm lg:text-lg lg:-translate-x-0 -translate-y-24 items-center absolute uppercase text-light-grey font-light tracking-widest page-ref">Home</p>
+    <nav class="relative px-12 md:px-0 md:w-10/12 mx-auto flex items-center py-12">
+      <a name="top" class="mr-auto md:mr-20" href="index.html"><span class="hidden">Home</span><img src="assets/logo.svg" alt="company-logo"></a>
       <ul class="hidden md:flex transform translate-y-2">
         <li class="mr-12 lg:mr-20 font-light text-medium-grey"><a href="portfolio.html">Portfolio</a></li>
-        <li class="mr-12 lg:mr-20 font-light text-medium-grey"><a href="about">About Us</a></li>
+        <li class="mr-12 lg:mr-20 font-light text-medium-grey"><a href="about.html">About Us</a></li>
         <li class="font-light text-medium-grey"><a href="contact.html">Contact</a></li>
       </ul>
-      <button><img class="md:hidden" src="assets/icons/icon-hamburger.svg" alt="menu-icon"></button>
+      <button id="menu" class="md:hidden focus:outline-none relative"><img src="assets/icons/icon-hamburger.svg" alt="menu-icon"><img class="hidden" src="assets/icons/icon-close.svg" alt="close-icon"></button>
     </nav>
+    <div id="mobile-menu" class="md:hidden absolute w-11/12 top-136px right-0 bg-very-light-grey z-30 py-12 px-12 transform translate-x-full transition-transform duration-500">
+      <ul>
+        <li class="mb-12"><a href="portfolio.html">Porfolio</a></li>
+        <li class="mb-12"><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
 
     <main>
-      <section class="mb-40 md:w-10/12 md:mx-auto">
-        <div class="relative">
-          <picture>
-            <source media="(min-width:960px)" srcset="assets/home/desktop/image-hero-paramour.jpg">
-            <source media="(min-width:760px)" srcset="assets/home/tablet/image-hero-paramour.jpg">
-            <img class="w-full object-cover"  src="assets/home/mobile/image-hero-paramour.jpg" alt="paramour project">
-          </picture>
+      <section class="mb-40 md:w-10/12 md:mx-auto over">
 
-          <div class="absolute inset-0 bg-black opacity-50"></div>
-
-          <div class="absolute z-10 top-1/2 ml-8 md:ml-16 lg:ml-40 text-white transform -translate-y-1/2">
-            <h2 class="text-5xl md:text-6xl w-2/6 md:w-4/5 lg:w-2/3 leading-tight mb-4">Project Paramour</h2>  
+          <div id="carrousel" class="relative overflow-hidden">
+            <div class="relative z-10 transition-opacity" data-galleryElement='01'>
+              <picture>
+                <source media="(min-width:960px)" srcset="assets/home/desktop/image-hero-paramour.jpg">
+                <source media="(min-width:760px)" srcset="assets/home/tablet/image-hero-paramour.jpg">
+                <img class="w-full object-cover"  src="assets/home/mobile/image-hero-paramour.jpg" alt="paramour project">
+              </picture>
     
-            <p class="w-10/12 md:w-4/5 lg:w-2/3 font-light">Project made for an art museum near Southwest London. Project Paramour is 
-              a statement of bold, modern architecture.</p>
-          
-            <a class="inline-block bg-very-dark-blue px-12 py-6 mt-16 font-light" href="#">See Our Portfolio <img class="ml-6 inline" src="assets/icons/icon-arrow.svg" alt="arrow icon"></a>
+              <div class="absolute inset-0 bg-black opacity-50"></div>
+    
+              <div class="absolute z-10 top-1/2 ml-8 md:ml-16 lg:ml-40 text-white transform -translate-y-1/2">
+                <h2 class="text-5xl md:text-6xl w-2/6 md:w-4/5 lg:w-2/3 leading-tight mb-4 font-bold">Project Paramour</h2>  
+        
+                <p class="w-10/12 md:w-4/5 lg:w-2/3 font-light">Project made for an art museum near Southwest London. Project Paramour is a statement of bold, modern architecture.</p>
+    
+                <a class="inline-block bg-very-dark-blue px-12 py-6 mt-16 font-light" href="portfolio.html">See Our Portfolio <img class="ml-6 inline" src="assets/icons/icon-arrow.svg" alt="arrow icon"></a>
+              </div>
+            </div>
+            <div class="absolute inset-0 z-0 opacity-0 transition-opacity" data-galleryElement='02'>
+              <picture>
+                <source media="(min-width:960px)" srcset="assets/home/desktop/image-hero-seraph.jpg">
+                <source media="(min-width:760px)" srcset="assets/home/tablet/image-hero-seraph.jpg">
+                <img class="w-full object-cover"  src="assets/home/mobile/image-hero-seraph.jpg" alt="seraph project">
+              </picture>
+    
+              <div class="absolute inset-0 bg-black opacity-50"></div>
+    
+              <div class="absolute z-10 top-1/2 ml-8 md:ml-16 lg:ml-40 text-white transform -translate-y-1/2">
+                <h2 class="text-5xl md:text-6xl w-2/6 md:w-4/5 lg:w-2/3 leading-tight mb-4 font-bold">Seraph Station</h2>  
+        
+                <p class="w-10/12 md:w-4/5 lg:w-2/3 font-light">The Seraph Station project challenged us to design a unique station that would transport people through time. The result is a fresh and futuristic model inspired by space stations.</p>
+              
+                <a class="inline-block bg-very-dark-blue px-12 py-6 mt-16 font-light" href="portfolio.html">See Our Portfolio <img class="ml-6 inline" src="assets/icons/icon-arrow.svg" alt="arrow icon"></a>
+              </div>
+            </div>
+            <div class="absolute inset-0 z-0 transition-opacity" data-galleryElement='03'>
+              <picture>
+                <source media="(min-width:960px)" srcset="assets/home/desktop/image-hero-federal.jpg">
+                <source media="(min-width:760px)" srcset="assets/home/tablet/image-hero-federal.jpg">
+                <img class="w-full object-cover"  src="assets/home/mobile/image-hero-federal.jpg" alt="federal project">
+              </picture>
+    
+              <div class="absolute inset-0 bg-black opacity-50"></div>
+    
+              <div class="absolute z-10 top-1/2 ml-8 md:ml-16 lg:ml-40 text-white transform -translate-y-1/2">
+                <h2 class="text-5xl md:text-6xl w-2/6 md:w-4/5 lg:w-2/3 leading-tight mb-4 font-bold">Federal II Tower</h2>  
+        
+                <p class="w-10/12 md:w-4/5 lg:w-2/3 font-light">A sequel theme project for a tower originally built in the 1800s. We achieved this with a striking look of brutal minimalism with modern touches.</p>
+              
+                <a class="inline-block bg-very-dark-blue px-12 py-6 mt-16 font-light" href="portfolio.html">See Our Portfolio <img class="ml-6 inline" src="assets/icons/icon-arrow.svg" alt="arrow icon"></a>
+              </div>
+            </div>
+            <div class="absolute inset-0 z-0 transition-opacity" data-galleryElement='04'>
+              <picture>
+                <source media="(min-width:960px)" srcset="assets/home/desktop/image-hero-trinity.jpg">
+                <source media="(min-width:760px)" srcset="assets/home/tablet/image-hero-trinity.jpg">
+                <img class="w-full object-cover"  src="assets/home/mobile/image-hero-trinity.jpg" alt="trinity project">
+              </picture>
+    
+              <div class="absolute inset-0 bg-black opacity-50"></div>
+    
+              <div class="absolute z-10 top-1/2 ml-8 md:ml-16 lg:ml-40 text-white transform -translate-y-1/2">
+                <h2 class="text-5xl md:text-6xl w-2/6 md:w-4/5 lg:w-2/3 leading-tight mb-4 font-bold">Trinity Bank Tower</h2>  
+        
+                <p class="w-10/12 md:w-4/5 lg:w-2/3 font-light">Trinity Bank challenged us to make a concept for a 84 story building located in the middle of a city with a high earthquake frequency. For this project we used curves to blend design and stability to meet our objectives.</p>
+              
+                <a class="inline-block bg-very-dark-blue px-12 py-6 mt-16 font-light" href="portfolio.html">See Our Portfolio <img class="ml-6 inline" src="assets/icons/icon-arrow.svg" alt="arrow icon"></a>
+              </div>
+            </div>
           </div>
-        </div>
       
-        <!-- <div>
-          <h2>Seraph Station</h2>   
-          <p>The Seraph Station project challenged us to design a unique station that would 
-            transport people through time. The result is a fresh and futuristic model 
-            inspired by space stations.</p>
-        
-          <a href="#">See Our Portfolio</a>
-        </div>
-      
-        <div>
-          <h2>Federal II Tower</h2>     
-          <p>A sequel theme project for a tower originally built in the 1800s. We achieved 
-            this with a striking look of brutal minimalism with modern touches.</p>
-          
-          <a href="#">See Our Portfolio</a>
-        </div>
-      
-        <div>
-          <h2>Trinity Bank Tower</h2>
-        
-          <p>Trinity Bank challenged us to make a concept for a 84 story building located 
-            in the middle of a city with a high earthquake frequency. For this project we 
-            used curves to blend design and stability to meet our objectives.</p>
-        
-          <a href="#">See Our Portfolio</a>
-        </div> -->
-      
-        <ul class="hidden lg:flex transform -translate-x-20 -translate-y-20">
-          <li><button class="bg-very-dark-blue p-8 text-sm text-white">01</button></li>
-          <li><button class="bg-very-light-grey p-8 text-sm text-dark-grey">02</button></li>
-          <li><button class="bg-very-light-grey p-8 text-sm text-dark-grey">03</button></li>
-          <li><button class="bg-very-light-grey p-8 text-sm text-dark-grey">04</button></li>
+        <ul id="carrousel-controls" class="hidden lg:flex transform -translate-x-20 -translate-y-20 relative z-30">
+          <li><button class="bg-very-dark-blue p-8 text-sm text-white focus:outline-none">01</button></li>
+          <li><button class="bg-very-light-grey p-8 text-sm text-dark-grey focus:outline-none">02</button></li>
+          <li><button class="bg-very-light-grey p-8 text-sm text-dark-grey focus:outline-none">03</button></li>
+          <li><button class="bg-very-light-grey p-8 text-sm text-dark-grey focus:outline-none">04</button></li>
         </ul>
       
       </section>
@@ -83,7 +118,7 @@
   
         <div class="flex relative z-10">
           <div class="lg:w-2/5 md:mt-32 lg:mt-0 lg:ml-auto">
-            <h2 class="text-5xl lg:text-6xl font-normal leading-normal lg:leading-tight mb-8">Welcome to Arch Studio</h2>
+            <h2 class="text-5xl lg:text-6xl font-bold leading-normal lg:leading-tight mb-8 text-very-dark-blue">Welcome to Arch Studio</h2>
           
             <p class="mb-6 text-dark-grey leading-loose text-md">We have a unique network and skillset to help bring your projects to life. Our 
               small team of highly skilled individuals combined with our large network put us 
@@ -109,16 +144,16 @@
           <div class="absolute inset-0 bg-black opacity-50"></div>
           
           <div class="absolute z-10 top-1/2 ml-8 md:ml-16 lg:ml-32 text-white transform -translate-y-1/2">
-            <h2 class="text-5xl lg:text-6xl md:w-3/5 leading-tight mb-4">Small team, big ideas</h2>
+            <h2 class="text-5xl lg:text-6xl md:w-3/5 leading-tight mb-4 font-bold">Small team, big ideas</h2>
           
-            <a class="inline-block bg-very-dark-blue px-12 py-6 mt-8 font-light" href="#">About Us <img class="ml-6 inline" src="assets/icons/icon-arrow.svg" alt="arrow icon"></a>
+            <a class="inline-block bg-very-dark-blue px-12 py-6 mt-8 font-light" href="about.html">About Us <img class="ml-6 inline" src="assets/icons/icon-arrow.svg" alt="arrow icon"></a>
           </div>
         </div>
       </section>
     
       <section class="mb-32  w-10/12 mx-auto">
         <div class="flex items-center justify-between mb-12">
-          <h2 class="text-5xl lg:text-6xl font-normal">Featured</h2>
+          <h2 class="text-5xl lg:text-6xl font-bold text-very-dark-blue">Featured</h2>
           <a class="hidden md:inline-block bg-very-dark-blue px-12 py-6 font-light text-white" href="portfolio.html">See all <img class="ml-6 inline" src="assets/icons/icon-arrow.svg" alt="arrow icon"></a>
         </div>
       
@@ -164,13 +199,13 @@
     </main>
   
     <footer>
-      <div class="flex flex-col md:flex-row items-center bg-very-light-grey md:bg-footer">
+      <div class="flex flex-col md:flex-row items-center bg-footer">
         <a href="#top"><img class="bg-very-dark-blue p-12" src="assets/logo-white.svg" alt="company-logo"></a>
         <ul class="flex flex-col md:flex-row w-full self-stretch items-center">
-          <li class="md:mx-8 lg:mx-16 my-8 md:my-0"><a class="text-medium-grey text-sm lg:text-lg" href="portfolio.html">Portfolio</a></li>
-          <li class="md:mr-8 lg:mr-16 mb-8 md:my-0"><a class="text-medium-grey text-sm lg:text-lg" href="about.html">About Us</a></li>
-          <li class="mb-16 md:mb-0"><a class="text-medium-grey text-sm lg:text-lg" href="contact.html">Contact</a></li>
-          <li class="md:ml-auto mb-24 md:mb-0"><a class="bg-very-dark-blue text-white text-sm font-light px-8 py-8 md:py-4 lg:py-8 lg:text-lg" href="portfolio.html">See Our Portfolio <img class="ml-6 inline" src="assets/icons/icon-arrow.svg" alt="arrow icon"></a></li>
+          <li class="md:mx-8 lg:mx-16 my-8 md:my-0"><a class="text-medium-grey text-sm" href="portfolio.html">Portfolio</a></li>
+          <li class="md:mr-8 lg:mr-16 mb-8 md:my-0"><a class="text-medium-grey text-sm" href="about.html">About Us</a></li>
+          <li class="mb-16 md:mb-0"><a class="text-medium-grey text-sm" href="contact.html">Contact</a></li>
+          <li class="md:ml-auto mb-24 md:mb-0"><a class="bg-very-dark-blue text-white text-sm font-light px-8 py-8 md:py-4 lg:py-8" href="portfolio.html">See Our Portfolio <img class="ml-6 inline" src="assets/icons/icon-arrow.svg" alt="arrow icon"></a></li>
         </ul>
       </div>
     </footer>

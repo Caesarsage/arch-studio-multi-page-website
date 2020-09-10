@@ -4,7 +4,6 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    //"build": "postcss css/tailwind.css -o css/style.css"
   },
   "keywords": [],
   "author": "",
